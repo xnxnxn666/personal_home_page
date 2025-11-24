@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Your Name] - Academic Portfolio</title>
+    
+    <!-- 引入 Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- 引入 Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        academic: {
+                            blue: '#003366', 
+                            50: '#f9fafb',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body { -webkit-font-smoothing: antialiased; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 leading-relaxed">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 transition-all duration-300">
+        <div class="max-w-4xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="#" class="text-lg font-bold text-slate-900 tracking-tight hover:text-academic-blue transition-colors">[Your Name]</a>
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-600">
+                <a href="#about" class="hover:text-academic-blue">About</a>
+                <a href="#news" class="hover:text-academic-blue">News</a>
+                <a href="#publications" class="hover:text-academic-blue">Publications</a>
+                <a href="#projects" class="hover:text-academic-blue">Projects</a>
+                <a href="#contact" class="hover:text-academic-blue">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <main class="max-w-4xl mx-auto px-6 pt-28 pb-20 space-y-24">
+
+        <!-- Section: About Me (保持静态，因为改动不频繁) -->
+        <section id="about" class="scroll-mt-28">
+            <div class="flex flex-col md:flex-row gap-10 items-start">
+                <div class="w-full md:w-1/3 flex justify-center md:justify-start">
+                    <img src="https://placehold.co/400x400/e2e8f0/475569?text=Photo" alt="Profile" class="w-48 h-48 rounded-lg object-cover shadow-md grayscale hover:grayscale-0 transition-all duration-500">
+                </div>
+                <div class="w-full md:w-2/3 space-y-4">
+                    <h1 class="text-4xl font-bold text-slate-900 tracking-tight">[Your Name]</h1>
+                    <p class="text-lg text-slate-700 font-medium">Ph.D. Student in Computer Science</p>
+                    <p class="text-slate-600 leading-7">
+                        I am a Ph.D. student at <a href="#" class="hover:text-academic-blue underline decoration-slate-300">University Name</a>, advised by Prof. Advisor. 
+                        My research focuses on <strong>Computer Vision</strong> and <strong>Generative AI</strong>.
+                    </p>
+                    <div class="pt-4 flex flex-wrap gap-3">
+                        <a href="#" class="inline-flex items-center px-4 py-2 bg-slate-900 text-white text-sm font-medium rounded hover:bg-slate-700 transition-colors">CV</a>
+                        <a href="#" class="inline-flex items-center px-4 py-2 border border-slate-300 text-slate-700 text-sm font-medium rounded hover:bg-slate-50 transition-colors">Google Scholar</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="border-slate-200" />
+
+        <!-- Section: News (动态渲染) -->
+        <section id="news" class="scroll-mt-24">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">News</h2>
+            <div id="news-container" class="space-y-4">
+                <!-- JS 将在这里插入内容 -->
+            </div>
+        </section>
+
+        <hr class="border-slate-200" />
+
+        <!-- Section: Publications (动态渲染) -->
+        <section id="publications" class="scroll-mt-24">
+            <h2 class="text-2xl font-bold text-slate-900 mb-8 flex items-center">
+                Publications
+                <span class="ml-4 text-sm font-normal text-slate-500 bg-slate-100 px-2 py-1 rounded">(* equal contribution)</span>
+            </h2>
+            <div id="publications-container" class="space-y-12">
+                <!-- JS 将在这里插入内容 -->
+            </div>
+        </section>
+
+        <hr class="border-slate-200" />
+
+        <!-- Section: Projects (保持静态，或按需改为动态) -->
+        <section id="projects" class="scroll-mt-24">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Project 1 -->
+                <div class="group border border-slate-200 rounded-lg p-4 bg-white hover:shadow-lg transition-all">
+                    <div class="h-40 bg-slate-100 rounded mb-4 overflow-hidden">
+                        <img src="https://placehold.co/600x400/e2e8f0/64748b?text=Demo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <h3 class="font-bold text-slate-900 mb-2">Real-time Tracker</h3>
+                    <p class="text-sm text-slate-600">An open-source implementation of object tracking on Edge devices.</p>
+                </div>
+                <!-- Project 2 -->
+                <div class="group border border-slate-200 rounded-lg p-4 bg-white hover:shadow-lg transition-all">
+                    <div class="h-40 bg-slate-100 rounded mb-4 overflow-hidden">
+                        <img src="https://placehold.co/600x400/e2e8f0/64748b?text=Tool" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <h3 class="font-bold text-slate-900 mb-2">MedSeg Tool</h3>
+                    <p class="text-sm text-slate-600">Web-based medical image segmentation tool.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer id="contact" class="pt-12 pb-8 border-t border-slate-200 text-center">
+            <h2 class="text-xl font-bold text-slate-900 mb-4">Contact</h2>
+            <p class="text-slate-600 text-sm">University Name, City, Country</p>
+            <p class="font-mono text-academic-blue mt-2 text-sm">yourname [at] uni [dot] edu</p>
+            <div class="mt-8 text-xs text-slate-400">&copy; 2024 [Your Name]</div>
+        </footer>
+
+    </main>
+
+    <!-- JavaScript Data & Logic -->
+    <script>
+        // ==========================================
+        // 配置区域：请在这里修改数据
+        // ==========================================
+
+        // 1. 你的名字 (用于在论文列表中自动高亮)
+        const MY_NAME = "Your Name"; 
+
+        // 2. 新闻列表数据
+        const newsData = [
+            { 
+                date: "May 2024", 
+                content: "One paper on <strong>3D Gaussian Splatting</strong> was accepted to <span class='font-semibold text-academic-blue'>ECCV 2024</span>." 
+            },
+            { 
+                date: "Feb 2024", 
+                content: "Started internship at <strong>NVIDIA Research</strong>." 
+            },
+            { 
+                date: "Dec 2023", 
+                content: "Received the Outstanding Graduate Student Award." 
+            }
+        ];
+
+        // 3. 论文列表数据
+        const publicationsData = [
+            {
+                title: "High-Fidelity 3D Avatar Generation from Monocular Video",
+                authors: ["Your Name", "Collaborator A", "Advisor Name"],
+                venue: "CVPR 2024",
+                venueSuffix: "Oral", // 可选，例如 "Oral", "Spotlight"
+                year: 2024,
+                image: "https://placehold.co/300x200/f1f5f9/64748b?text=CVPR+2024",
+                description: "We propose a novel framework utilizing temporal consistency to reconstruct animatable 3D avatars.",
+                links: [
+                    { name: "PDF", url: "#" },
+                    { name: "arXiv", url: "#" },
+                    { name: "Code", url: "#" },
+                    { name: "Project Page", url: "#" }
+                ]
+            },
+            {
+                title: "Efficient Neural Radiance Fields for Mobile Devices",
+                authors: ["Collaborator A*", "Your Name*", "Advisor Name"],
+                venue: "ECCV 2022",
+                venueSuffix: "", 
+                year: 2022,
+                image: "https://placehold.co/300x200/f1f5f9/64748b?text=ECCV+2022",
+                description: "Optimizing NeRF inference speed by 50x using a hybrid voxel-grid representation.",
+                links: [
+                    { name: "PDF", url: "#" },
+                    { name: "Code", url: "#" }
+                ]
+            }
+        ];
+
+        // ==========================================
+        // 渲染逻辑 (通常不需要修改以下代码)
+        // ==========================================
+
+        // 渲染 News
+        const newsContainer = document.getElementById('news-container');
+        newsData.forEach(item => {
+            const newsItem = `
+                <div class="flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-6">
+                    <div class="text-sm font-mono text-slate-500 whitespace-nowrap w-24 shrink-0">${item.date}</div>
+                    <div class="text-slate-700 text-sm sm:text-base">${item.content}</div>
+                </div>
+            `;
+            newsContainer.innerHTML += newsItem;
+        });
+
+        // 渲染 Publications
+        const pubContainer = document.getElementById('publications-container');
+        publicationsData.forEach(pub => {
+            // 处理作者名字高亮
+            const formattedAuthors = pub.authors.map(author => {
+                if (author.includes(MY_NAME)) {
+                    return `<span class="font-bold underline decoration-slate-400 underline-offset-2">${author}</span>`;
+                }
+                return author;
+            }).join(", ");
+
+            // 处理链接按钮
+            const linksHtml = pub.links.map(link => `
+                <a href="${link.url}" class="inline-flex items-center px-2.5 py-0.5 rounded border border-slate-200 bg-white text-xs font-medium text-slate-700 hover:bg-slate-100 hover:border-slate-300 transition-all">
+                    ${link.name}
+                </a>
+            `).join("");
+
+            // 处理 Venue 后缀 (如 Oral)
+            const venueSuffixHtml = pub.venueSuffix 
+                ? `<span class="text-red-700 font-semibold not-italic text-xs ml-1 px-1.5 py-0.5 bg-red-50 rounded-full border border-red-100">${pub.venueSuffix}</span>` 
+                : '';
+
+            const pubHtml = `
+                <article class="flex flex-col md:flex-row gap-6">
+                    <div class="w-full md:w-52 md:flex-shrink-0">
+                        <img src="${pub.image}" alt="${pub.title}" class="w-full h-36 object-cover rounded border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+                    </div>
+                    <div class="flex-1 space-y-2">
+                        <h3 class="text-lg font-bold text-slate-900 leading-tight hover:text-academic-blue transition-colors">
+                            <a href="#">${pub.title}</a>
+                        </h3>
+                        <div class="text-slate-700 text-sm md:text-base">
+                            ${formattedAuthors}
+                        </div>
+                        <div class="text-slate-600 italic text-sm">
+                            ${pub.venue}, ${pub.year} ${venueSuffixHtml}
+                        </div>
+                        <p class="text-sm text-slate-500 leading-relaxed hidden md:block">
+                            ${pub.description}
+                        </p>
+                        <div class="flex flex-wrap gap-2 mt-2">
+                            ${linksHtml}
+                        </div>
+                    </div>
+                </article>
+            `;
+            pubContainer.innerHTML += pubHtml;
+        });
+    </script>
+</body>
+</html>
